@@ -9,4 +9,5 @@ public interface OrderService {
     void delete(Integer id);
     List<Order> getAll();
     Order getById(Integer id);
+    void update(Integer id, String title, Double price);
 }

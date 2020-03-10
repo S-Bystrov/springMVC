@@ -9,11 +9,11 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <html>
 <head>
-    <title><spring:message code="orders.new"/></title>
+    <title><spring:message code="update.title"/></title>
 </head>
 <body>
-<caption><h4><spring:message code="orders.new"/></h4></caption>
-<form action="/add-new-order" method="POST">
+<caption><h4><spring:message code="update.title"/></h4></caption>
+<form action="/update/{id}" method="POST">
     <label><spring:message code="orders.order"/></label>
     <input type="text" name="title" minlength="1">
     <label><spring:message code="orders.price"/></label>

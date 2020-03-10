@@ -21,8 +21,12 @@ public class OrderServiceImpl implements OrderService {
         Order order = new Order();
         order.setPrice(price);
         order.setTitle(title);
-        Order lastOrder = orders.get(orders.size()-1);
-        order.setId(lastOrder.getId()+1);
+        if(!orders.isEmpty()) {
+            Order lastOrder = orders.get(orders.size()-1);
+            order.setId(lastOrder.getId()+1);
+        } else {
+            order.setId(1);
+        }
         orderDao.save(order);
     }
 
@@ -35,5 +39,12 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public Order getById(Integer id) {
         return orderDao.getById(id);
+    }
+
+    @Override
+    public void update(Integer id, String title, Double price) {
+        Order order = orderDao.getById(id);
+        order.setTitle(title);
+        order.setPrice(price);
     }
 }

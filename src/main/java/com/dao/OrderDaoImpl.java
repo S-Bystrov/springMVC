@@ -4,6 +4,7 @@ import com.domain.Order;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class OrderDaoImpl implements OrderDao {
     private List<Order> orders = new ArrayList<>();
@@ -38,6 +39,10 @@ public class OrderDaoImpl implements OrderDao {
 
     @Override
     public Order getById(Integer id) {
-        return orders.get(id);
+        Order order = orders.stream()
+                .filter(x -> id == x.getId())
+                .findFirst()
+                .orElse(null);
+        return order;
     }
 }
