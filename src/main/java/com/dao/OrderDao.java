@@ -9,4 +9,5 @@ public interface OrderDao {
     void delete(Order order);
     List<Order> getAll();
     Order getById(Integer id);
+    void update(Order order);
 }

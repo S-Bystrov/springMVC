@@ -8,16 +8,14 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
     <title><spring:message code="orders.title"/></title>
 </head>
 <body>
+<jsp:include page="./language.jsp"></jsp:include>
 <table border="1" cellpadding="1" cellspacing="1" style="width: 500px">
-    <input type="radio" name = "lang" value ="en"> English </br>
-    <input type="radio" name = "lang" value ="ru"> Russian </br>
-    <caption><h4>Orders</h4></caption>
+    <caption><h4><spring:message code="orders.title"/></h4></caption>
     <tr>
         <th><spring:message code="orders.order"/></th>
         <th><spring:message code="orders.price"/></th>

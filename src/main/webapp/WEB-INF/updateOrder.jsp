@@ -12,8 +12,9 @@
     <title><spring:message code="update.title"/></title>
 </head>
 <body>
+<jsp:include page="./language.jsp"></jsp:include>
 <caption><h4><spring:message code="update.title"/></h4></caption>
-<form action="/update/{id}" method="POST">
+<form action="/update/${id}" method="POST">
     <label><spring:message code="orders.order"/></label>
     <input type="text" name="title" minlength="1">
     <label><spring:message code="orders.price"/></label>

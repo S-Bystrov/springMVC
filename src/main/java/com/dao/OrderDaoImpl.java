@@ -45,4 +45,9 @@ public class OrderDaoImpl implements OrderDao {
                 .orElse(null);
         return order;
     }
+
+    @Override
+    public void update(Order order) {
+
+    }
 }

@@ -46,5 +46,6 @@ public class OrderServiceImpl implements OrderService {
         Order order = orderDao.getById(id);
         order.setTitle(title);
         order.setPrice(price);
+        System.out.println(order.toString());
     }
 }

@@ -12,6 +12,7 @@
     <title><spring:message code="orders.new"/></title>
 </head>
 <body>
+<jsp:include page="./language.jsp"></jsp:include>
 <caption><h4><spring:message code="orders.new"/></h4></caption>
 <form action="/add-new-order" method="POST">
     <label><spring:message code="orders.order"/></label>
